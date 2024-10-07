@@ -1,8 +1,8 @@
 class Product:
-    def __init__(self, name: str, price: float, quantity: int, active: bool = True):
+    def __init__(self, product_name: str, price: float, quantity: int, active: bool = True):
 
-        if not isinstance(name, str):
-            raise TypeError(f"Expected a string but you entered a {type(name)}")
+        if not isinstance(product_name, str):
+            raise TypeError(f"Expected a string but you entered a {type(product_name)}")
         if not isinstance(price, float):
             raise TypeError(f"Expected a float but you entered a {type(price)}")
         if not isinstance(quantity, int):
@@ -14,7 +14,7 @@ class Product:
 
 
         # if types and values are correct, assign them to attributes
-        self.name = name
+        self.name = product_name
         self.price = price
         self.quantity = quantity
         self.active = active
